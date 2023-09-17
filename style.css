@@ -1,0 +1,129 @@
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    /* ### Primary */
+--Darkcyan: hsl(158, 36%, 37%);
+--Cream: hsl(30, 38%, 92%);
+
+/* ### Neutral */
+
+--Verydarkblue: hsl(212, 21%, 14%);
+--Darkgrayishblue: hsl(228, 12%, 48%);
+--White: hsl(0, 0%, 100%);
+
+--Borderradius: 10px;
+/* ## Typography*/
+
+--Fontsize: 14px;
+--Fontsize1: 32px;
+--Fontweight1: 700;
+--Fontweight2: 700;
+}
+
+ body{
+    height: 100vh; width: 100vw;
+    background-color: var(--Cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+ }
+
+ main{
+    height: fit-content; width: fit-content;
+    display: flex;
+    justify-content: center;
+    flex-flow: row;
+ }
+
+ #section-img{
+    background-image: url("image-product-desktop.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 420px; width: 300px; 
+    border-radius: var(--Borderradius) 0 0 var(--Borderradius);
+ }
+ 
+ #section-txt{
+    background-color: var(--White);
+    height: 420px; width: 300px;
+    padding: 30px;
+    border-radius: 0 var(--Borderradius) var(--Borderradius) 0;
+ }
+
+ #wrapper{
+    height: 100%; width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+ }
+
+#product{
+ color: var(--Darkcyan);
+}
+
+#bold-txt{
+   font-size: var(--Fontsize1);
+   font-weight:  var(--Fontweight1);
+   color: var(--Verydarkblue);
+}
+#paragraph{
+    font-size: var(--Fontsize);
+    color: var(--Darkgrayishblue);
+    font-family: 'Montserrat';
+}
+#price{
+    font-size: var(--Fontsize1);
+    font-family: 'Fraunces';
+    color: var(--Darkcyan);
+    font-weight: var(--Fontweight2);
+}
+#price span{
+    font-size: var(--Fontsize);
+    color: var(--Darkgrayishblue);
+    
+}
+
+button{
+  height: 45px; width: 100%;
+  border: none;
+  color: var(--White);
+  background-color: var(--Darkcyan);
+  border-radius: var(--Borderradius);
+  font-size: var(--Fontsize);
+}
+button:hover{
+    background-color: #355F4F;
+}
+
+ /* for mobile */
+ @media only screen and (max-width: 600px) {
+  main{
+   flex-direction: column;
+  }
+
+ main{
+    height: 90%; width: 80%;
+  }
+ 
+ #section-img{
+    height: 40%; width: 100%;  
+    border-radius: var(--Borderradius) var(--Borderradius) 0 0 ;
+ }
+
+ #section-txt{
+    height: 60%; width: 100%;
+    border-radius: 0 0 var(--Borderradius) var(--Borderradius) ;
+ }
+ :root{
+    --Fontsize: 16px;
+    --Fontsize1: 32px;
+    --Fontweight1: 700;
+    --Fontweight2: 700;
+ }
+}
